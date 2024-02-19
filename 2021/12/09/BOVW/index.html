@@ -19,29 +19,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"weinanwang-ru.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.12.1","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="AbstractWire routing is one of the major steps in designing printed circuit board (PCB). In a one-layer PCB design, the target is to implement circuit wires by placing terminals and connecting them">
+    <meta name="description" content="AbstractIn this project, we implemented an image classification method based on low-dimensional feature vectors generated with the scale invariant feature transform (SIFT) descriptor, using the bag-of">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Solving Printed Circuit Board Routing Problem Using Lee’s and Hadlock’s Maze Routing Algorithm">
-<meta property="og:url" content="https://weinanwang-ru.github.io/2019/04/23/Maze/index.html">
+<meta property="og:title" content="Image Classification Based on Image Feature Descriptor and Bag of Visual Words">
+<meta property="og:url" content="https://weinanwang-ru.github.io/2021/12/09/BOVW/index.html">
 <meta property="og:site_name" content="Weinan Wang">
-<meta property="og:description" content="AbstractWire routing is one of the major steps in designing printed circuit board (PCB). In a one-layer PCB design, the target is to implement circuit wires by placing terminals and connecting them">
+<meta property="og:description" content="AbstractIn this project, we implemented an image classification method based on low-dimensional feature vectors generated with the scale invariant feature transform (SIFT) descriptor, using the bag-of">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://weinanwang-ru.github.io/2019/04/23/Maze/Maze.png">
-<meta property="article:published_time" content="2019-04-23T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-09-19T19:49:59.814Z">
+<meta property="article:published_time" content="2021-12-10T05:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-19T22:10:09.803Z">
 <meta property="article:author" content="Weinan Wang">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://weinanwang-ru.github.io/2019/04/23/Maze/Maze.png">
 
 
-<link rel="canonical" href="https://weinanwang-ru.github.io/2019/04/23/Maze/">
+<link rel="canonical" href="https://weinanwang-ru.github.io/2021/12/09/BOVW/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://weinanwang-ru.github.io/2019/04/23/Maze/","path":"2019/04/23/Maze/","title":"Solving Printed Circuit Board Routing Problem Using Lee’s and Hadlock’s Maze Routing Algorithm"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://weinanwang-ru.github.io/2021/12/09/BOVW/","path":"2021/12/09/BOVW/","title":"Image Classification Based on Image Feature Descriptor and Bag of Visual Words"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Solving Printed Circuit Board Routing Problem Using Lee’s and Hadlock’s Maze Routing Algorithm | Weinan Wang</title>
+<title>Image Classification Based on Image Feature Descriptor and Bag of Visual Words | Weinan Wang</title>
   
 
 
@@ -162,7 +160,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://weinanwang-ru.github.io/2019/04/23/Maze/">
+    <link itemprop="mainEntityOfPage" href="https://weinanwang-ru.github.io/2021/12/09/BOVW/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -177,12 +175,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Solving Printed Circuit Board Routing Problem Using Lee’s and Hadlock’s Maze Routing Algorithm | Weinan Wang">
+      <meta itemprop="name" content="Image Classification Based on Image Feature Descriptor and Bag of Visual Words | Weinan Wang">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Solving Printed Circuit Board Routing Problem Using Lee’s and Hadlock’s Maze Routing Algorithm
+          Image Classification Based on Image Feature Descriptor and Bag of Visual Words
         </h1>
 
         <div class="post-meta-container">
@@ -193,7 +191,7 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2019-04-23 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-23T00:00:00-04:00">2019-04-23</time>
+      <time title="Created: 2021-12-10 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-10T00:00:00-05:00">2021-12-10</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -215,9 +213,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="/2019/04/23/Maze/Maze.png" class="">
-
-<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>Wire routing is one of the major steps in designing printed circuit board (PCB). In a one-layer PCB design, the target is to implement circuit wires by placing terminals and connecting them with conductive metal traces on a plane, under the restriction that latterly added wires should not intersect existing ones. Under the assumption of fixed trace width, we formulated this problem as a maze routing problem, i.e., finding paths that connect pairs of square cells in a grid, while avoiding cells marked as obstacles. We implemented the Lee’s algorithm and the Hadlock’s algorithm to solve this problem, and discussed the differences in time complexity between the two algorithms.</p>
+        <h1 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h1><p>In this project, we implemented an image classification method based on low-dimensional feature vectors generated with the scale invariant feature transform (SIFT) descriptor, using the bag-of-visual-words (BOVW) method. It enables classification of high resolution images with feature vector-based machine learning methods, such as support vector machine. We evaluated the performance of this method by testing its classification accuracy on a small-scale high resolution food image dataset. We compared its performance with AlexNet, a deep convolutional neuron network that directly takes the high-dimensional image as input and performs end-to-end classification. The optimal 5-class classification result from the SIFT descriptor is close to results from AlexNet trained on the same dataset, confirming its validity, while being much inferior to pre-trained AlexNet fine-tuned on the dataset. The results demonstrated a potential of using image descriptors for low-cost and efficient image classification on small datasets.</p>
 
     </div>
 
@@ -247,7 +243,7 @@
 
 <div class="copyright">
   &copy; 2022 – 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa-solid fa-r"></i>
   </span>
